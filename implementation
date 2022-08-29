@@ -17,6 +17,16 @@ public:
         }
         return member;
     }
+    
+public:
+    ~Singleton()
+    {
+        if (member != nullptr)
+        {
+            delete member;
+        }
+        member = nullptr;
+    }
 };
 
 Singleton* Singleton::member = nullptr;
