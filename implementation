@@ -1,0 +1,22 @@
+include <iostream>
+
+class Singleton
+{
+public:
+    static Singleton* member;
+
+private:
+    Singleton() {}
+
+public:
+    static Singleton* function()
+    {
+        if (member == nullptr)
+        {
+            member = new Singleton;
+        }
+        return member;
+    }
+};
+
+Singleton* Singleton::member = nullptr;
