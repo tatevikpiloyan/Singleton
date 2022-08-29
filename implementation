@@ -21,10 +21,6 @@ public:
 public:
     ~Singleton()
     {
-        if (member != nullptr)
-        {
-            delete member;
-        }
         member = nullptr;
     }
 };
